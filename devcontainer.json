@@ -1,0 +1,105 @@
+{
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop",
+        "GitHub.copilot",
+        "PKief.material-icon-theme",
+        "christian-kohler.path-intellisense",
+        "Tyriar.lorem-ipsum",
+        "mhutchie.git-graph",
+        "pomdtr.excalidraw-editor",
+        "AbbyCin.vscode-onelight2",
+        "valentjn.vscode-ltex",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.associations": {
+          "*.tex": "latex"
+        },
+        "latex-workshop.latex.autoClean.run": "onBuilt",
+        "latex-workshop.latex.clean.subfolder.enabled": true,
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "lualatex -> biber -> lualatex*2",
+            "tools": [
+              "lualatex",
+              "biber",
+              "lualatex",
+              "lualatex"
+            ]
+          },
+          {
+            "name": "latexmk",
+            "tools": [
+              "latexmk"
+            ]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "lualatex",
+            "command": "latexmk",
+            "args": [
+              "--shell-escape",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-lualatex",
+              "%DOC%"
+            ]
+          },
+          {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+              "%DOCFILE%"
+            ]
+          },
+          {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-pdf",
+              "-outdir=%OUTDIR%",
+              "%DOC%"
+            ]
+          }
+        ],
+        "latex-workshop.linting.chktex.enabled": true,
+        "latex-workshop.synctex.afterBuild.enabled": true,
+        "files.exclude": {
+          "**/_minted-main-book": true,
+          "**/_minted-main": true,
+          "**/*.aux": true,
+          "**/*.bbl": true,
+          "**/*.bcf": true,
+          "**/*.blg": true,
+          "**/*.config.json": true,
+          "**/*.fdb_latexmk": true,
+          "**/*.fls": true,
+          "**/*.gz": true,
+          "**/*.ist": true,
+          "**/*.lof": true,
+          "**/*.log": true,
+          "**/*.lol": true,
+          "**/*.lot": true,
+          "**/*.out": true,
+          "**/*.pyg": true,
+          "**/*.pytxcode": true,
+          "**/*.synctex*": true,
+          "**/*.toc": true,
+          "**/*.xml": true
+        },
+        "editor.wordWrap": "on"
+      }
+    }
+  },
+  "name": "Thesis",  
+  "image": "flupke3622/latex-base",
+  "postCreateCommand": "tlmgr install parskip acronym titlesec amsmath anyfontsize booktabs calc caption changepage csquotes dirtree enumitem fontspec geometry graphicx kvoptions lipsum listings minted multicol pdfpages pgf-umlsd tcolorbox tikz ulem xcolor xparse bigfoot babel-french babel-dutch hyphen-dutch hyphen-french environ pdflscape"
+}
