@@ -17,7 +17,7 @@ Based on Ubuntu 22.04, this image is enriched with lots of tools, libraries, and
 
 ### 📦 LaTeX Packages
 - **List:** acronym, amsmath, anyfontsize, babel, biblatex, booktabs, calc, caption, changepage, csquotes, dirtree, enumitem, environ, etoolbox, fancyvrb, fontspec, geometry, graphicx, kvoptions, latexindent, latexmk, lipsum, listings, minted, multicol, newfloat, parskip, pdflscape, pdfpages, pgf-umlsd, ragged2e, setspace, sidecap, tcolorbox, tikz, titlesec, ulem, upquote, xcolor, xparse
-- **[Individual info](/docs/tlmgr packages.md)**
+- **[Individual info](/docs/tlmgr-packages.md)**
 
 ### 🛠 Additional Utilities
 - **Git**: 🔄 Distributed version control system.
